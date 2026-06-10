@@ -27,22 +27,16 @@ int main() {
     string openned = "({[";
 
     for (int i=0; i < braces.size(); ++i) {
-        if (openned.find(braces[i]) != string::npos) {
-            cout << "here\n";
+        if (openned.find(braces[i]) != string::npos || s.empty()) {
             s.push(braces[i]);
         } else {
-            cout << "not\n";
             char c = s.top();
-            cout << c << " " << braces[i] << endl;
             
-            if (c == braces[i]) {
-                cout << "removed\n";
+            if ((c == '(' && braces[i] == ')') || (c == '[' && braces[i] == ']') || (c == '{' && braces[i] == '}')) {
                 s.pop();
             }
         }
     }
-
-    cout << s.size() << "\n";
 
     if (s.empty()) {
         cout << "VALID!\n";
