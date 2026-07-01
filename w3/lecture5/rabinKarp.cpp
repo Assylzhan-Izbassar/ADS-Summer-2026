@@ -38,23 +38,23 @@ vector<int> rabinKarp(string& text, string& pattn) {
         }
     }
 
-    for (int i=0; i < pPow.size(); ++i) {
-        cout << pPow[i] << " ";
-    }
-    cout << endl;
+    // for (int i=0; i < pPow.size(); ++i) {
+    //     cout << pPow[i] << " ";
+    // }
+    // cout << endl;
 
-    for (int i=0; i < h.size(); ++i) {
-        cout << h[i] << " ";
-    }
-    cout << endl;
+    // for (int i=0; i < h.size(); ++i) {
+    //     cout << h[i] << " ";
+    // }
+    // cout << endl;
 
-    cout << hashPattn << "\n";
+    // cout << hashPattn << "\n";
     return occurance;
 }
 
 int main() {
-    string text = "abcd";
-    string pattn = "bc";
+    string text = "bcatca, gjklajcs, oejwaifaca, tjrkj";
+    string pattn = "ca";
 
     vector<int> result = rabinKarp(text, pattn);
 
